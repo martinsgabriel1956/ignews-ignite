@@ -7,6 +7,8 @@
   <img alt="Pull Request: Welcome" src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=61dafb&labelColor=1f2729&style=for-the-badge" />
 </p>
 
+https://user-images.githubusercontent.com/59969985/137323007-3ef5a71d-bea3-4cd4-8afe-641398e78e8c.mp4
+
 <br />
 
 # :computer: Tecnologias
@@ -45,8 +47,8 @@ npm run dev
 
 yarn dev
 
+```
+
 # :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
-
-```
