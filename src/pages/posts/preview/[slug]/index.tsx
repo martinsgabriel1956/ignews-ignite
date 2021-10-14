@@ -43,7 +43,7 @@ export default function PostPreview({ post }: PostProps) {
           <div className={styles.continueReading}>
             Wanna Continue Reading?
             <Link href="/">
-              <a href="">Subscribe now 🤗</a>
+              <a>Subscribe now 🤗</a>
             </Link>
           </div>
         </article>
