@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import { signIn, useSession } from "../../../node_modules/next-auth/client";
+import { signIn, useSession } from "next-auth/client";
 import { getStripeJs } from '../../services/stripe-js';
 import { api } from "../../services/api";
 import { useRouter } from "next/router";
