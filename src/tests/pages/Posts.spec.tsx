@@ -2,8 +2,6 @@ import { render, screen } from "@testing-library/react"
 import Posts, { getStaticProps } from "../../pages/posts"
 import { getPrismicClient } from "../../services/prismic"
 
-
-
 const posts = [
   {
     slug: 'my-new-post',
@@ -15,7 +13,7 @@ const posts = [
 
 jest.mock('../../services/prismic')
 
-describe('Home page', () => {
+describe('Posts page', () => {
   it('renders correctly', () => {
     render(<Posts posts={posts} />)
 
