@@ -13,6 +13,9 @@ describe('SignInButton component', () => {
     render(
       <SignInButton />
     );
+    
+    screen.logTestingPlaygroundURL();
+
     expect(screen.getByText('Sign in with Github')).toBeInTheDocument();
   })
   
@@ -33,6 +36,9 @@ describe('SignInButton component', () => {
     render(
       <SignInButton />
     );
+    
+    screen.logTestingPlaygroundURL();
+
     expect(screen.getByText('John Doe')).toBeInTheDocument();
   })
 })

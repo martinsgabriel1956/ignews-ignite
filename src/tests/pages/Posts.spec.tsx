@@ -15,7 +15,9 @@ jest.mock('../../services/prismic')
 
 describe('Posts page', () => {
   it('renders correctly', () => {
-    render(<Posts posts={posts} />)
+    render(<Posts posts={posts} />);
+
+    screen.logTestingPlaygroundURL();
 
     expect(screen.getByText(posts[0].title)).toBeInTheDocument()
   })
@@ -46,9 +48,11 @@ describe('Posts page', () => {
           }
         ]
       })
-    } as any)
+    } as any);
 
     const response = await getStaticProps({});
+
+    screen.logTestingPlaygroundURL();
 
     expect(response).toEqual(
       expect.objectContaining({

@@ -15,7 +15,9 @@ jest.mock('../../services/prismic')
 
 describe('Post page', () => {
   it('renders correctly', () => {
-    render(<Post post={post} />)
+    render(<Post post={post} />);
+
+    screen.logTestingPlaygroundURL();
 
     expect(screen.getByText(post.title)).toBeInTheDocument()
     expect(screen.getByText('This is my new post')).toBeInTheDocument()
@@ -31,6 +33,8 @@ describe('Post page', () => {
         slug: 'my-new-post',
       }
     } as any);
+
+    screen.logTestingPlaygroundURL();
 
     expect(response).toEqual(
       expect.objectContaining({
@@ -74,6 +78,8 @@ describe('Post page', () => {
         slug: 'my-new-post',
       }
     } as any);
+
+    screen.logTestingPlaygroundURL();
 
     expect(response).toEqual(
       expect.objectContaining({

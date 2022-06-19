@@ -19,10 +19,13 @@ describe('ActiveLink component', () => {
         <a>Home</a>
       </ActiveLink>
     );
+
+    screen.logTestingPlaygroundURL();
+    
     expect(screen.getByText('Home')).toBeInTheDocument();
-   })
+  })
   
-   it('adds active class if the link as currently active', () => { 
+  it('adds active class if the link as currently active', () => { 
     render(
       <ActiveLink
         href="/"
@@ -31,6 +34,9 @@ describe('ActiveLink component', () => {
         <a>Home</a>
       </ActiveLink>
     );
+
+    screen.logTestingPlaygroundURL();
+
     expect(screen.getByText('Home')).toHaveClass('active');
    })
 })

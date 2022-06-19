@@ -15,6 +15,8 @@ describe('SubscribeButton component', () => {
     
     render(<SubscribeButton />);
 
+    screen.logTestingPlaygroundURL();
+
     expect(screen.getByText('Subscribe now')).toBeInTheDocument();
   })
 
@@ -25,11 +27,13 @@ describe('SubscribeButton component', () => {
     useSessionMocked.mockReturnValueOnce([null, false]);
     
     render( <SubscribeButton />);
-  
+
     const subscribeButton = screen.getByText('Subscribe now');
-      
+    
     fireEvent.click(subscribeButton);
-  
+
+    screen.logTestingPlaygroundURL();
+    
     expect(signInMocked).toHaveBeenCalled();
   })
   
@@ -60,6 +64,8 @@ describe('SubscribeButton component', () => {
     const subscribeButton = screen.getByText('Subscribe now');
       
     fireEvent.click(subscribeButton);
+    
+    screen.logTestingPlaygroundURL();
   
     expect(pushMock).toHaveBeenCalledWith('/posts');
   })

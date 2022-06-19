@@ -21,7 +21,9 @@ describe('Post preview page', () => {
     
     useSessionMocked.mockReturnValueOnce([null, false])
 
-    render(<Post post={post} />)
+    render(<Post post={post} />);
+
+    screen.logTestingPlaygroundURL();
 
     expect(screen.getByText(post.title)).toBeInTheDocument()
     expect(screen.getByText('This is my new post')).toBeInTheDocument()
@@ -45,7 +47,9 @@ describe('Post preview page', () => {
       push: pushMock
     } as any)
 
-    render(<Post post={post} />)
+    render(<Post post={post} />);
+
+    screen.logTestingPlaygroundURL();
 
     expect(pushMock).toHaveBeenCalledWith(`/posts/${post.slug}`)
    })
@@ -78,6 +82,8 @@ describe('Post preview page', () => {
         slug: post.slug,
       }
     } as any);
+
+    screen.logTestingPlaygroundURL();
 
     expect(response).toEqual(
       expect.objectContaining({

@@ -14,6 +14,8 @@ describe('Home page', () => {
   it('renders correctly', () => {
     render(<Home product={{ priceId: 'fake-price-id', amount: 'R$10,00' }} />)
 
+    screen.logTestingPlaygroundURL();
+
     expect(screen.getByText('for R$10,00 month')).toBeInTheDocument()
   })
 
@@ -26,6 +28,8 @@ describe('Home page', () => {
     } as any)
 
     const response = await getStaticProps({});
+
+    screen.logTestingPlaygroundURL();
 
     expect(response).toEqual(
       expect.objectContaining({
